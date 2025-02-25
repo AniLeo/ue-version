@@ -53,7 +53,7 @@ analyse_ue_buildstamp()
   fi
 
   # Get the "File Version Number" exif property
-  strings_output=$(strings "$file_path" | grep -oP "UE[0-9]+\+Release-" | head -n 1 2>/dev/null)
+  strings_output=$(strings "$file_path" | grep -oP "UE[0-9]+\+Release-.*" | head -n 1 2>/dev/null)
 
   # Failed to find any build stamp strings in the executable
   if [ -z "$strings_output" ]; then
