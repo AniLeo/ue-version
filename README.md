@@ -4,6 +4,12 @@ A tool that analyses Unreal Engine 4 and Unreal Engine 5 based games and determi
 ## Usage
 `./ue-version.sh <directory>`
 
+### Requirements
+- [exiftool](https://exiftool.org/)
+  - Arch: `sudo pacman -S perl-image-exiftool`
+  - Debian/Ubuntu: `sudo apt install libimage-exiftool-perl`
+  - Fedora: `sudo dnf install perl-Image-ExifTool`
+
 ### Examples
 ```
 ./ue-version.sh "~/.local/share/Steam/steamapps/common/Jusant"

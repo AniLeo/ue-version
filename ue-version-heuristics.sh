@@ -48,7 +48,7 @@ analyse_ue_buildstamp()
 
   # Failed to find the file
   if [ -z "$file_path" ]; then
-    echo "File '$2' not found"
+    echo "File '*-Shipping.exe' not found"
     return 1
   fi
 

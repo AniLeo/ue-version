@@ -7,6 +7,17 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
+# Check if exiftool is installed
+if ! command -v exiftool &> /dev/null; then
+  echo "ExifTool is not installed on your system."
+  echo ""
+  echo "Please install it before using ue-version."
+  echo "  - Arch: sudo pacman -S perl-image-exiftool"
+  echo "  - Debian/Ubuntu: sudo apt install libimage-exiftool-perl"
+  echo "  - Fedora: sudo dnf install perl-Image-ExifTool"
+  exit 1
+fi
+
 # Note: The calling order of the heuristics matters, most to least reliable
 declare -a error_messages
 
